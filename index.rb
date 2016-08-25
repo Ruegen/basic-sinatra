@@ -1,13 +1,17 @@
 require 'sinatra'
 
 get "/" do
-  File.read('public/index.html.erb')
+  erb File.read('public/index.html.erb')
+  # erb :index #only works if you have a views folder
+  # File.read('public/index.html.erb')
 end
 
 get "/about" do
-  File.read('public/about.html.erb')
+  # erb :about #only works if you have a views folder
+  # File.read('public/about.html.erb')
 end
 
 get "/contact" do
-  File.read('public/contact.html.erb')
+  erb :contact #only works if you have a views folder
+  # File.read('public/contact.html.erb')
 end
